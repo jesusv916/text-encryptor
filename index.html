@@ -12,26 +12,29 @@
 </head>
 <body>
     <nav>
-        <figure>
+        <figure class="logo">
             <img src="./assets/Vector.png" alt="">
         </figure>
     </nav>
-    <section>
-        <textarea name="" id="" cols="30" rows="10">Ingrese el texto aquí</textarea>
-        <div class="button-container">
-            <button class="encrypt">Encriptar</button>
-            <button class="decrypt">Desencriptar</button>
-        </div>
-    </section>
-    <section>
-        <figure class="img-search">
-            <img src="./assets/Muñeco.png" alt="">
-        </figure>
-        <h2>Ningún mensaje fue encontrado</h2>
-        <p>
-            Ingresa el texto que desees encriptar o desencriptar.
-        </p>
-        <button class="copy inactive">Copiar</button>
-    </section>
+    <main>
+        <section class="text">
+            <textarea name="" id="area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="button-container">
+                <button class="encrypt">Encriptar</button>
+                <button class="decrypt">Desencriptar</button>
+            </div>
+        </section>
+        <section class="outcome">
+            <figure class="img-search inactive">
+                <img src="./assets/Muñeco.png" alt="">
+            </figure>
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+            <button class="copy inactive">Copiar</button>
+        </section>
+    </main>
+    <script src="./main.js"></script>
 </body>
 </html>
