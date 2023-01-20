@@ -42,7 +42,7 @@ nav {
     width: 100%;
     border-style: none;
     border-color: transparent;
-    overflow: auto;
+    overflow: hidden;
     resize: none;
     color: var(--dark-blue);
     padding: 8px;
@@ -52,7 +52,7 @@ nav {
 
 .text textarea::placeholder {
     color: var(--dark-blue);
-  }
+}
 
 .inactive{
     display: none;
@@ -135,6 +135,7 @@ button {
 @media(min-width: 1024px) {
     body{
         margin-top: 50px;
+        height: 90vh;
     }
 
     nav{
@@ -149,12 +150,12 @@ button {
     }
 
     .text{
-        height: 90vh;
+        height: 78vh;
         margin-top: 48px;
     }
 
     .outcome{
-        height: 90vh;
+        height: 78vh;
         margin-top: -100px;
     }
     
