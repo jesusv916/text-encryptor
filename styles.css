@@ -1,0 +1,19 @@
+:root {
+    /* colores */
+    --soft-blue: #E5E5E5;
+    --dark-blue: #0A3871;
+    --just-white: #FFFFFF;
+    --dark-blue-400: #072B61;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
