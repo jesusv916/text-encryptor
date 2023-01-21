@@ -10,13 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
-        <figure class="logo">
+        <!-- <figure class="logo">
             <img src="./assets/logo(2).png" alt="">
-        </figure>
+        </figure> -->
+        <h2 class="logo">
+            Encriptador
+        </h2>
     </header>
     <main>
         <section class="text">
@@ -39,7 +42,7 @@
             </p>
             <textarea class="message inactive" cols="30" rows="10"></textarea>
             <p class="text-result inactive"></p>
-            <button class="copy inactive">Copiar</button>
+            <button class="copy inactive"onclick = "copyBtn()" >Copiar</button>
             <button class="erase inactive" onclick="btnErase()">Borrar todo</button>
         </section>
     </main>

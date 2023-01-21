@@ -13,11 +13,11 @@ imgLens.classList.remove('inactive');
 function btnEncrypt() {
     if(inputText.value == ""){
         // alert("Por favor digita algo");
-        swal({
+        swal.fire({
             title: "Intenta digitar algo",
             text: "Escribe el texto que quieres encriptar",
             icon: "error",
-            button: "lo intentaré",
+            confirmButtonText: "lo intentaré",
           });;
     }
     else{
@@ -50,11 +50,11 @@ function encryptFunction(stringEncrypt){
 
 function btnDecrypt() {
     if(inputText.value == ""){
-        swal({
+        swal.fire({
             title: "Intenta digitar algo",
-            text: "Escribe el texto que quieres encriptar",
+            text: "Escribe el texto que quieres desencriptar",
             icon: "error",
-            button: "lo intentaré",
+            confirmButtonText: "lo intentaré",
           });;
     }
     else{
@@ -95,3 +95,22 @@ function btnErase(){
     message.value="";
 
 }
+
+function copyBtn(){
+    let copyMessage = message.value;
+    
+    navigator.clipboard.writeText(copyMessage).then(
+        function(){
+            swal.fire(); 
+            swal.fire({
+                title: "Copiado!",
+                icon: "success",
+                confirmButtonText: "Ok",
+              });;
+        })
+      .catch(
+         function() {
+            alert("err"); // error
+      });
+}
+
