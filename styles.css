@@ -4,6 +4,7 @@
     --dark-blue: #0A3871;
     --just-white: #FFFFFF;
     --dark-blue-400: #072B61;
+    --gray: #495057;
 }
 
 * {
@@ -23,12 +24,16 @@ body {
     background-color: var(--soft-blue);
 }
 
-nav {
+header {
     width: 100%;
 }
 
 .logo {
     margin: 24px;
+}
+
+.logo img {
+    width: 80px;
 }
 
 .text{
@@ -114,11 +119,45 @@ button {
     text-align: center;
 }
 
-.outcome button {
+.outcome .copy {
     margin-top: 16px;
     background-color: var(--just-white);
     border: solid 1px var(--dark-blue);
     color: var(--dark-blue);
+}
+
+.outcome .erase{
+    margin-top: 24px;
+    background-color: var(--dark-blue);
+    color: var(--just-white);
+}
+
+.outcome .erase:hover{
+    background-color: var(--dark-blue-400);
+}
+
+.outcome .text-result {
+    height: 50px;
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 36px;
+    color: var(--gray);
+}
+
+.outcome .message {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    width: 100%;
+    border-style: none;
+    border-color: transparent;
+    overflow: hidden;
+    resize: none;
+    color: var(--dark-blue);
+    padding: 8px;
+    outline: none;
+    background-color: transparent;
 }
 
 @media(min-width: 500px) {
@@ -138,7 +177,7 @@ button {
         height: 90vh;
     }
 
-    nav{
+    header{
         padding-left: 10%;
     }
 
@@ -150,13 +189,19 @@ button {
     }
 
     .text{
-        height: 78vh;
+        height: 70vh;
         margin-top: 48px;
     }
 
     .outcome{
-        height: 78vh;
+        height: 70vh;
+        min-width: 462px;
+        max-width: 463px;
         margin-top: -100px;
+    }
+
+    .outcome h2 {
+        margin-top: 16px;
     }
     
     .img-search{
@@ -165,7 +210,7 @@ button {
 }
 
 @media(min-width: 1650px){
-    nav{
+    header{
         padding-left: 20%;
     }
 }

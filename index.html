@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="shortcut icon" type=“image/x-icon” href="./assets/favicon.ico">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <nav>
+    <header>
         <figure class="logo">
-            <img src="./assets/Vector.png" alt="">
+            <img src="./assets/logo(2).png" alt="">
         </figure>
-    </nav>
+    </header>
     <main>
         <section class="text">
             <textarea name="" id="area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <h4 class="info">Solo letras minúsculas y sin acento</h4>
+            </div>
             <div class="button-container">
-                <button class="encrypt">Encriptar</button>
-                <button class="decrypt">Desencriptar</button>
+                <button class="encrypt" onclick="btnEncrypt()">Encriptar</button>
+                <button class="decrypt" onclick="btnDecrypt()">Desencriptar</button>
             </div>
         </section>
         <section class="outcome">
             <figure class="img-search inactive">
-                <img src="./assets/Muñeco.png" alt="">
+                <img class="lens inactive" src="./assets/Muñeco.png" alt="">
             </figure>
-            <h2>Ningún mensaje fue encontrado</h2>
-            <p>
+            <h2 class="default-title">Ningún mensaje fue encontrado</h2>
+            <p class="default-text">
                 Ingresa el texto que desees encriptar o desencriptar.
             </p>
+            <textarea class="message inactive" cols="30" rows="10"></textarea>
+            <p class="text-result inactive"></p>
             <button class="copy inactive">Copiar</button>
+            <button class="erase inactive" onclick="btnErase()">Borrar todo</button>
         </section>
     </main>
     <script src="./main.js"></script>
