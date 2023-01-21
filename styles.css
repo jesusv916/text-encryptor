@@ -37,10 +37,6 @@ header {
     color: var(--dark-blue);
 }
 
-.logo img {
-    width: 80px;
-}
-
 .text{
     margin: 16px;
 }
