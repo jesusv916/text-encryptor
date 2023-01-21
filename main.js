@@ -11,17 +11,28 @@ const eraseButton = document.querySelector('.erase');
 imgLens.classList.remove('inactive');
 
 function btnEncrypt() {
-    imgLens.classList.add('inactive');
-    defaultTitle.classList.add('inactive');
-    textDefault.classList.add("inactive");
-    buttonCopy.classList.remove("inactive");
-    message.classList.remove('inactive');
-    eraseButton.classList.remove('inactive');
-
-
-    const result = encryptFunction(inputText.value);
-    message.value = result;
-    inputText.value="";
+    if(inputText.value == ""){
+        // alert("Por favor digita algo");
+        swal({
+            title: "Intenta digitar algo",
+            text: "Escribe el texto que quieres encriptar",
+            icon: "error",
+            button: "lo intentaré",
+          });;
+    }
+    else{
+        imgLens.classList.add('inactive');
+        defaultTitle.classList.add('inactive');
+        textDefault.classList.add("inactive");
+        buttonCopy.classList.remove("inactive");
+        message.classList.remove('inactive');
+        eraseButton.classList.remove('inactive');
+    
+    
+        const result = encryptFunction(inputText.value);
+        message.value = result;
+        inputText.value="";
+    }
 }
 
 function encryptFunction(stringEncrypt){  
@@ -38,16 +49,27 @@ function encryptFunction(stringEncrypt){
 }
 
 function btnDecrypt() {
-    imgLens.classList.add('inactive');
-    defaultTitle.classList.add('inactive');
-    textDefault.classList.add("inactive");
-    buttonCopy.classList.remove("inactive");
-    message.classList.remove('inactive');
-    eraseButton.classList.remove('inactive');
+    if(inputText.value == ""){
+        swal({
+            title: "Intenta digitar algo",
+            text: "Escribe el texto que quieres encriptar",
+            icon: "error",
+            button: "lo intentaré",
+          });;
+    }
+    else{
 
-    const answer = decrypt(inputText.value);
-    message.value = answer;
+        imgLens.classList.add('inactive');
+        defaultTitle.classList.add('inactive');
+        textDefault.classList.add("inactive");
+        buttonCopy.classList.remove("inactive");
+        message.classList.remove('inactive');
+        eraseButton.classList.remove('inactive');
 
+        const answer = decrypt(inputText.value);
+        message.value = answer;
+
+    }
 }
 
 function decrypt(stringDecrypt){
