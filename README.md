@@ -1,7 +1,7 @@
 
 # Text encryptor
 
-Website with the intention of encrypt your messages and decrypt then whenever you want.
+Website with the intention of encrypt your messages and decrypt them whenever you want.
 
 Made with: 
 
